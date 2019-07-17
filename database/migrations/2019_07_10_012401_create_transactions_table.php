@@ -17,7 +17,7 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('account_id');
-            $table->enum('source', [Transaction::SOURCE_DEPOSIT, Transaction::SOURCE_DEPOSIT, Transaction::SOURCE_TRANSFER]);
+            $table->enum('source', [Transaction::SOURCE_DEPOSIT, Transaction::SOURCE_WITHDRAW, Transaction::SOURCE_TRANSFER]);
             $table->enum('type', [Transaction::TYPE_CREDIT, Transaction::TYPE_DEBIT]);
             $table->string('description')->nullable();
             $table->unsignedBigInteger('amount')->default(0);

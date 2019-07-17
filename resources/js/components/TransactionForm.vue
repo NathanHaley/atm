@@ -16,6 +16,7 @@
                                name="amount"
                                v-model="amount"
                                @keydown="clearErrors"
+                               autocomplete="off"
                                required>
                         <span v-for="error in errors" class="invalid-feedback" role="alert">
                             <strong>{{ error }}</strong>

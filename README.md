@@ -1,20 +1,28 @@
 # atm-demo
+A very simple demo of web development using Laravel, Vuejs, MySql for an ATM system.
 
-##Install
-###1. Clone repo
-###2. cd into root
-###3. run:
+## Install
+
+### Clone repo
+cd into atm
+
+### run:
 ````
 composer install
 vagrant up
 ````
-###3. run: 
+
+### run: 
 ````
+vagrant ssh
+cd /var/www/atm
 php artisan storage:link
 php artisan migrate
 php artisan passport:install
-npm install
+yarn
+yarn run dev
 ````
-###4. Browse to atm.test
-###5. Register account
-###6. Click on things, do stuff
+
+### Browse to atm.test
+### Register account
+### Click on things, do stuff

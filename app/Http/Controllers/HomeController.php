@@ -25,7 +25,7 @@ class HomeController extends Controller
     {
         $user = auth()->user();
 
-        $switchToAccountType = ($accountType === Account::TYPE_CHECKING) ? Account::TYPE_CHECKING : Account::TYPE_SAVING;
+        $switchToAccountType = ($accountType === Account::TYPE_CHECKING) ? Account::TYPE_SAVING : Account::TYPE_CHECKING;
 
         $account = $user->accounts()->whereType($accountType)->first();
 
